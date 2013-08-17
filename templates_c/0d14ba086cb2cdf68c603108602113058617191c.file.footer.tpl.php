@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-08-17 11:52:02
+<?php /* Smarty version Smarty-3.1.14, created on 2013-08-17 17:32:28
          compiled from "templates/base/footer.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2106667838520e6bb44bed49-89964795%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '0d14ba086cb2cdf68c603108602113058617191c' => 
     array (
       0 => 'templates/base/footer.tpl',
-      1 => 1376732861,
+      1 => 1376753547,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </div>
 <div id="footer">
       <div class="container">
-        <p class="text-muted credit">Awesome development blog !</p>
+        <p class="text-muted credit">Konolol's Blog &copy;2013 - This blog is using <a href="https://github.com/n1co/openblog">OpenBlog</a></p>
       </div>
     </div>
 <script src="//code.jquery.com/jquery.js"></script>
