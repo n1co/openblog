@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-08-17 11:38:49
+<?php /* Smarty version Smarty-3.1.14, created on 2013-08-17 13:37:53
          compiled from "templates/base/header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1266976987520e6bb44bd565-36226527%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'b064cc9713db2698525354c56d85dbb7f8bc69ec' => 
     array (
       0 => 'templates/base/header.tpl',
-      1 => 1376732328,
+      1 => 1376739471,
       2 => 'file',
     ),
   ),
@@ -20,20 +20,17 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'variables' => 
   array (
     'siteName' => 0,
+    'postTitle' => 0,
     'template' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_520e6bb44bd9c6_60491363')) {function content_520e6bb44bd9c6_60491363($_smarty_tpl) {?><html>
-    <head>
-        <title></title>
-    </head>
-    <body>
-<!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_520e6bb44bd9c6_60491363')) {function content_520e6bb44bd9c6_60491363($_smarty_tpl) {?><!DOCTYPE html>
 <html>
   <head>
     <title><?php echo $_smarty_tpl->tpl_vars['siteName']->value;?>
-</title>
+<?php if (isset($_smarty_tpl->tpl_vars['postTitle']->value)){?> - <?php echo $_smarty_tpl->tpl_vars['postTitle']->value;?>
+<?php }?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <link href="includes/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
@@ -55,7 +52,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
           </div>
           <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-              <li class="active"><a href="#">Home</a></li>
+              <li class="active"><a href="index.php">Home</a></li>
               <li><a href="#about">About</a></li>
               <li><a href="#contact">Contact</a></li>
               <li class="dropdown">

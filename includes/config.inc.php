@@ -16,4 +16,8 @@ $smarty->cache_dir = 'cache/';
 
 $theme = 'base'; 
 $smarty->assign('theme',$theme); 
+
+$smarty->assign('template', $theme);
+$smarty->assign('name','Zbouby');
+$smarty->assign('siteName','Zboubz\'s Blog');
 ?>

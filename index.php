@@ -6,10 +6,6 @@ $starttime = $mtime;
 
 include('includes/config.inc.php');
 
-$smarty->assign('template', $theme);
-$smarty->assign('name','Zbouby');
-$smarty->assign('siteName','Zboubz\'s Blog');
-
 $posts = get_posts();
 $smarty->assign('posts', $posts);
 
