@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-08-19 14:44:19
+<?php /* Smarty version Smarty-3.1.14, created on 2013-08-19 14:56:49
          compiled from "templates/base/index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:146043721520e5e55abe974-60079243%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '7e9f1e1ad16e46eb55c5f7c98878a3386c29ca22' => 
     array (
       0 => 'templates/base/index.tpl',
-      1 => 1376916257,
+      1 => 1376917007,
       2 => 'file',
     ),
   ),
@@ -20,6 +20,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'variables' => 
   array (
     'name' => 0,
+    'art_count' => 0,
     'posts' => 0,
     'i' => 0,
   ),
@@ -29,6 +30,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
     <h1>Hello, <?php echo $_smarty_tpl->tpl_vars['name']->value;?>
  !</h1><br />
+    <div style="display: none; class="nb_art">
+		<?php echo $_smarty_tpl->tpl_vars['art_count']->value;?>
+
+                </div>
     <?php  $_smarty_tpl->tpl_vars['i'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['i']->_loop = false;
  $_smarty_tpl->tpl_vars['id'] = new Smarty_Variable;
  $_from = $_smarty_tpl->tpl_vars['posts']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}

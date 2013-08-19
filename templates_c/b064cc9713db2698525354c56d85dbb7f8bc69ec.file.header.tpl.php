@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-08-19 14:38:58
+<?php /* Smarty version Smarty-3.1.14, created on 2013-08-19 15:07:25
          compiled from "templates/base/header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1266976987520e6bb44bd565-36226527%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'b064cc9713db2698525354c56d85dbb7f8bc69ec' => 
     array (
       0 => 'templates/base/header.tpl',
-      1 => 1376915935,
+      1 => 1376917642,
       2 => 'file',
     ),
   ),
@@ -22,6 +22,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'siteName' => 0,
     'postTitle' => 0,
     'template' => 0,
+    'art_count' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -39,7 +40,26 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <link href="includes/bootstrap/css/responsive.css" rel="stylesheet" media="screen">
     <script src="//code.jquery.com/jquery.js"></script>
     <script src="includes/scrolling.js"></script>
-    
+    <script type="text/javascript">
+$(document).ready(function(){
+	var load = false;
+	var offset = $('.article:last').offset(); 
+	$(window).scroll(function(){
+		if((offset.top-$(window).height() <= $(window).scrollTop()) 
+		&& load==false && ($('.article').size()>=5) && 
+		($('.article').size()!=<?php echo $_smarty_tpl->tpl_vars['art_count']->value;?>
+)){
+			load = true;
+			var last_id = $('.article:last').attr('id');
+			$('.loadmore').show();
+			$.ajax({
+				url: './ajax_article.php', type: 'get', data: 'last='+last_id,
+				success: function(data) {
+					$('.loadmore').fadeOut(500);
+					$('.article:last').after(data);
+					offset = $('.article:last').offset();
+					load = false;}});}});});
+</script>
   </head>
   <body>
       <div id="wrap">

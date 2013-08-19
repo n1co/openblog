@@ -1,5 +1,8 @@
 {include file='base/header.tpl'}
     <h1>Hello, {$name} !</h1><br />
+    <div style="display: none; class="nb_art">
+		{$art_count}
+                </div>
     {foreach from=$posts key=id item=i}
         <div class="article" id="{$i.id}">
             <div class="article_header"><a href="perm.php?id={$i.id}">{$i.title}</a></div>

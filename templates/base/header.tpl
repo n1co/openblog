@@ -9,7 +9,25 @@
     <link href="includes/bootstrap/css/responsive.css" rel="stylesheet" media="screen">
     <script src="//code.jquery.com/jquery.js"></script>
     <script src="includes/scrolling.js"></script>
-    
+    <script type="text/javascript">
+$(document).ready(function(){
+	var load = false;
+	var offset = $('.article:last').offset(); 
+	$(window).scroll(function(){
+		if((offset.top-$(window).height() <= $(window).scrollTop()) 
+		&& load==false && ($('.article').size()>=5) && 
+		($('.article').size()!={$art_count})){
+			load = true;
+			var last_id = $('.article:last').attr('id');
+			$('.loadmore').show();
+			$.ajax({
+				url: './ajax_article.php', type: 'get', data: 'last='+last_id,
+				success: function(data) {
+					$('.loadmore').fadeOut(500);
+					$('.article:last').after(data);
+					offset = $('.article:last').offset();
+					load = false;}});}});});
+</script>
   </head>
   <body>
       <div id="wrap">

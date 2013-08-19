@@ -20,4 +20,10 @@ $smarty->assign('theme',$theme);
 $smarty->assign('template', $theme);
 $smarty->assign('name','Zbouby');
 $smarty->assign('siteName','Zboubz\'s Blog');
+
+open_database();
+$postquery="SELECT COUNT(*) AS id FROM post";
+$result = mysql_query($postquery) or die(mysql_error());
+$num = mysql_fetch_array($result);
+$smarty->assign('art_count', $num["id"]);
 ?>
