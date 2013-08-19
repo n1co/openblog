@@ -2,7 +2,7 @@
 </div>
 <div id="footer">
       <div class="container">
-        <p class="text-muted credit">Konolol's Blog &copy;2013 - This blog is using <a href="https://github.com/n1co/openblog">OpenBlog</a></p>
+        <p class="text-muted credit">{$siteName} &copy;2013 - This blog is using <a href="https://github.com/n1co/openblog">OpenBlog</a></p>
       </div>
     </div>
 <script src="//code.jquery.com/jquery.js"></script>

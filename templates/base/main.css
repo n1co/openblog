@@ -52,11 +52,13 @@ code {
 .article_header {
     border-bottom: 1px #C8C8C8 solid;
     padding: 3px;
+    text-shadow: 2px 2px #C8C8C8;
 }
 
 .article_content {
     min-height: 150px;
     padding: 3px;
+    text-shadow: 2px 2px #C8C8C8;
 }
 
 .article_footer {
