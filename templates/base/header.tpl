@@ -3,7 +3,6 @@
   <head>
     <title>{$siteName}{if isset($postTitle)} - {$postTitle}{/if}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap -->
     <link href="includes/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link rel="stylesheet" type="text/css" href="templates/{$template}/main.css">
     <link href="includes/bootstrap/css/responsive.css" rel="stylesheet" media="screen">
@@ -53,13 +52,13 @@ $(document).ready(function(){
                   <li><a href="#">Another action</a></li>
                   <li><a href="#">Something else here</a></li>
                   <li class="divider"></li>
-                  <li class="dropdown-header">Nav header</li>
+                  <li class="dropdown-header">TEST</li>
                   <li><a href="#">Separated link</a></li>
                   <li><a href="#">One more separated link</a></li>
                 </ul>
               </li>
             </ul>
-          </div><!--/.nav-collapse -->
+          </div>
         </div>
       </div>
           <div class="container">
