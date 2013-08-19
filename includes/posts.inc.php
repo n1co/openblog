@@ -1,7 +1,7 @@
 <?php
 function get_posts() 
 {
-    $sql = 'select * from post';
+    $sql = 'select * from post ORDER BY id DESC LIMIT 5';
     return execute_query($sql);
 }
 function get_post_by_id($id) 

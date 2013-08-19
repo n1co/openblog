@@ -7,6 +7,9 @@
     <link href="includes/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link rel="stylesheet" type="text/css" href="templates/{$template}/main.css">
     <link href="includes/bootstrap/css/responsive.css" rel="stylesheet" media="screen">
+    <script src="//code.jquery.com/jquery.js"></script>
+    <script src="includes/scrolling.js"></script>
+    
   </head>
   <body>
       <div id="wrap">
