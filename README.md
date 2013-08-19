@@ -10,4 +10,4 @@ Curently using:
 - jQuery
 
 
-If you want to test this, templates_c must be writable :)
+If you want to test this, templates_c/ and includes/ must be writable :)
