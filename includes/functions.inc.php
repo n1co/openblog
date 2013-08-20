@@ -70,5 +70,10 @@ function sanitize_output($string)
     return htmlspecialchars($string);
 }
 
-
+function pwd_encode($password)
+{
+    $intermediateSalt = md5('mgljtuà_çfçàg_sdçàfèd_çf-gdf_àg-_dfg(èdg(èdçsfg-_)df');
+    $salt = substr($intermediateSalt, 0, 6);
+    return hash("sha256", $password . $salt);
+}
 ?>

@@ -14,6 +14,7 @@ $smarty->assign('postContent', $article['content']);
 if (isset($_POST['content']))
 {
     update_post($_POST['title'], $_POST['content'], $_GET['id']);
+    redirect_to('admin.php');
 }
 
 $smarty->display("$theme/editor.tpl");
