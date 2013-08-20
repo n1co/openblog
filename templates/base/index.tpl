@@ -1,5 +1,4 @@
 {include file='base/header.tpl'}
-    <h1>Hello, {$name} !</h1><br />
     <div style="display: none; class="nb_art">
 		{$art_count}
                 </div>

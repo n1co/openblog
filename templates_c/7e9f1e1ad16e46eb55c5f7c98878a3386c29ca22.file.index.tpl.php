@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-08-19 14:56:49
+<?php /* Smarty version Smarty-3.1.14, created on 2013-08-20 16:33:20
          compiled from "templates/base/index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:146043721520e5e55abe974-60079243%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '7e9f1e1ad16e46eb55c5f7c98878a3386c29ca22' => 
     array (
       0 => 'templates/base/index.tpl',
-      1 => 1376917007,
+      1 => 1377009172,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'unifunc' => 'content_520e5e55abf690_57018090',
   'variables' => 
   array (
-    'name' => 0,
     'art_count' => 0,
     'posts' => 0,
     'i' => 0,
@@ -28,8 +27,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_520e5e55abf690_57018090')) {function content_520e5e55abf690_57018090($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('base/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
-    <h1>Hello, <?php echo $_smarty_tpl->tpl_vars['name']->value;?>
- !</h1><br />
     <div style="display: none; class="nb_art">
 		<?php echo $_smarty_tpl->tpl_vars['art_count']->value;?>
 

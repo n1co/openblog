@@ -53,17 +53,20 @@ function close_database()
     }
 }
 
-function redirect_to($url) {
+function redirect_to($url) 
+{
     if (isset($url)) {
         header("Location: " . $url);
     }
 }
  
-function sanitize_input($string) {
-    return mysql_escape_string($string);
+function sanitize_input($string) 
+{
+    return mysql_real_escape_string($string);
 }
  
-function sanitize_output($string) {
+function sanitize_output($string) 
+{
     return htmlspecialchars($string);
 }
 

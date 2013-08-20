@@ -8,6 +8,7 @@
     <link href="includes/bootstrap/css/responsive.css" rel="stylesheet" media="screen">
     <script src="//code.jquery.com/jquery.js"></script>
     <script src="includes/scrolling.js"></script>
+    <script src="includes/nicEdit.js" type="text/javascript"></script>
     <script type="text/javascript">
 $(document).ready(function(){
 	var load = false;

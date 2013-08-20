@@ -1,4 +1,5 @@
 <?php
+session_start();
 define('DATABASE_HOST', 'localhost');
 define('DATABASE_NAME', 'blog');
 define('DATABASE_USER', 'root');

@@ -99,3 +99,20 @@ code {
         font-family: helvetica, arial, sans serif;
         padding-left: 0px;
       }
+      
+      .arts{
+          border-radius: 5px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: #C8C8C8;
+        font-family: helvetica, arial, sans serif;
+        padding-left: 0px;
+      }
+
+      #posts_overall{
+          width: 100%;
+      }
+      #editor
+      {
+          margin-bottom: 15px;
+      }
