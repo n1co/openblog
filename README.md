@@ -8,7 +8,7 @@ Curently using:
 - Smarty template engine
 - Bootstrap CSS framework
 - jQuery
-
+- NicEdit WYSIWYG editor
 
 If you want to test this, templates_c/ and includes/ must be writable :)
 
