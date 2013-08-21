@@ -7,7 +7,6 @@
     <link rel="stylesheet" type="text/css" href="templates/{$template}/main.css">
     <link href="includes/bootstrap/css/responsive.css" rel="stylesheet" media="screen">
     <script src="//code.jquery.com/jquery.js"></script>
-    <script src="includes/scrolling.js"></script>
     <script src="includes/nicEdit.js" type="text/javascript"></script>
     <script type="text/javascript">
 $(document).ready(function(){
@@ -44,8 +43,12 @@ $(document).ready(function(){
           <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
               <li class="active"><a href="index.php">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="login.php">Login</a></li>
+              {if isset($login)}
+              <li><a href="index.php?logout">Logout</a></li>
+              <li><a href="admin.php">Admin</a></li>
+            {else}
+            <li><a href="login.php">Login</a></li>
+              {/if}
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
                 <ul class="dropdown-menu">

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-08-20 16:13:14
+<?php /* Smarty version Smarty-3.1.14, created on 2013-08-21 22:05:59
          compiled from "templates/base/header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1266976987520e6bb44bd565-36226527%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'b064cc9713db2698525354c56d85dbb7f8bc69ec' => 
     array (
       0 => 'templates/base/header.tpl',
-      1 => 1377007851,
+      1 => 1377115558,
       2 => 'file',
     ),
   ),
@@ -23,6 +23,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'postTitle' => 0,
     'template' => 0,
     'art_count' => 0,
+    'login' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -38,7 +39,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 /main.css">
     <link href="includes/bootstrap/css/responsive.css" rel="stylesheet" media="screen">
     <script src="//code.jquery.com/jquery.js"></script>
-    <script src="includes/scrolling.js"></script>
     <script src="includes/nicEdit.js" type="text/javascript"></script>
     <script type="text/javascript">
 $(document).ready(function(){
@@ -77,8 +77,12 @@ $(document).ready(function(){
           <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
               <li class="active"><a href="index.php">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="login.php">Login</a></li>
+              <?php if (isset($_smarty_tpl->tpl_vars['login']->value)){?>
+              <li><a href="index.php?logout">Logout</a></li>
+              <li><a href="admin.php">Admin</a></li>
+            <?php }else{ ?>
+            <li><a href="login.php">Login</a></li>
+              <?php }?>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
                 <ul class="dropdown-menu">

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-08-20 16:13:13
+<?php /* Smarty version Smarty-3.1.14, created on 2013-08-21 22:08:34
          compiled from "templates/base/admin.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:181700499952137473c369e0-27200321%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e04b396abef8a7837941f5f252f1f189fbf644b0' => 
     array (
       0 => 'templates/base/admin.tpl',
-      1 => 1377007968,
+      1 => 1377115713,
       2 => 'file',
     ),
   ),
@@ -41,9 +41,14 @@ $_smarty_tpl->tpl_vars['i']->_loop = true;
             <td><a href="editor.php?id=<?php echo $_smarty_tpl->tpl_vars['i']->value['id'];?>
 ">Edit</a></td>
             <td><a href="admin.php?delete=<?php echo $_smarty_tpl->tpl_vars['i']->value['id'];?>
-">Delete</a></td>
+" class="confirmation">Delete</a></td>
         </tr>
     <?php } ?>
 </table>
+    <script type="text/javascript">
+    $('.confirmation').on('click', function () {
+        return confirm('This post will be deleted, are you sure ?');
+    });
+</script>
 <?php echo $_smarty_tpl->getSubTemplate ('base/footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 <?php }} ?>

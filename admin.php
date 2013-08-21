@@ -2,7 +2,7 @@
 include('includes/config.inc.php');
 if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) 
 {
-    //header ("Location: index.php");
+    redirect_to('index.php');
 }
 
 if (isset($_GET['delete']))

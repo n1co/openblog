@@ -1,6 +1,11 @@
 <?php
 include('includes/config.inc.php');
 
+if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) 
+{
+    redirect_to('index.php');
+}
+
 $article = get_post_by_id($_GET['id']);
 $smarty->assign('article', $article);
       

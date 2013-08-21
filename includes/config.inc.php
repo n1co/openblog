@@ -27,4 +27,9 @@ $postquery="SELECT COUNT(*) AS id FROM post";
 $result = mysql_query($postquery) or die(mysql_error());
 $num = mysql_fetch_array($result);
 $smarty->assign('art_count', $num["id"]);
+
+if (isset($_SESSION['login']))
+{
+    $smarty->assign('login', $_SESSION['login']);
+}
 ?>
