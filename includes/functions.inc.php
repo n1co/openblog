@@ -76,4 +76,19 @@ function pwd_encode($password)
     $salt = substr($intermediateSalt, 0, 6);
     return hash("sha256", $password . $salt);
 }
+
+function get_plugins(){
+    $plugins=array();
+    if ($handle = opendir('plugins')) {
+        $u=0;
+        while (false !== ($entry = readdir($handle))) {
+            if ($entry!='.' && $entry!='..'){ 
+                $plugins[$u]=$entry;
+                $u++;
+            }
+        }
+        closedir($handle);
+    }
+    return $plugins;
+}
 ?>
