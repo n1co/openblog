@@ -6,7 +6,9 @@
     <link href="includes/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link rel="stylesheet" type="text/css" href="templates/{$template}/main.css">
     <link href="includes/bootstrap/css/responsive.css" rel="stylesheet" media="screen">
-    <script src="//code.jquery.com/jquery.js"></script>
+    <link rel="stylesheet" href="includes/jquery/css/jquery-ui-1.10.3.custom.min.css" />
+    <script src="includes/jquery/js/jquery-1.9.1.js"></script>
+    <script src="includes/jquery/js/jquery-ui-1.10.3.custom.min.js"></script>
     <script src="includes/nicEdit.js" type="text/javascript"></script>
     <script type="text/javascript">
 $(document).ready(function(){

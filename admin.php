@@ -8,6 +8,7 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != ''))
 if (isset($_GET['delete']))
 {
     delete_post($_GET['delete']);
+    redirect_to('admin.php');
 }
 //WIP PLUGINS
 $plugins=get_plugins();

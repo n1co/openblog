@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-08-21 22:05:59
+<?php /* Smarty version Smarty-3.1.14, created on 2013-08-25 20:03:40
          compiled from "templates/base/header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1266976987520e6bb44bd565-36226527%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'b064cc9713db2698525354c56d85dbb7f8bc69ec' => 
     array (
       0 => 'templates/base/header.tpl',
-      1 => 1377115558,
+      1 => 1377453818,
       2 => 'file',
     ),
   ),
@@ -38,7 +38,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <link rel="stylesheet" type="text/css" href="templates/<?php echo $_smarty_tpl->tpl_vars['template']->value;?>
 /main.css">
     <link href="includes/bootstrap/css/responsive.css" rel="stylesheet" media="screen">
-    <script src="//code.jquery.com/jquery.js"></script>
+    <link rel="stylesheet" href="includes/jquery/css/jquery-ui-1.10.3.custom.min.css" />
+    <script src="includes/jquery/js/jquery-1.9.1.js"></script>
+    <script src="includes/jquery/js/jquery-ui-1.10.3.custom.min.js"></script>
     <script src="includes/nicEdit.js" type="text/javascript"></script>
     <script type="text/javascript">
 $(document).ready(function(){
