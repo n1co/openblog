@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Lun 19 Août 2013 à 13:52
+-- Généré le: Dim 25 Août 2013 à 20:22
 -- Version du serveur: 5.5.32-0ubuntu0.13.04.1
 -- Version de PHP: 5.4.9-4ubuntu2.2
 
@@ -27,10 +27,40 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS `categories` (
+  `catId` int(11) NOT NULL AUTO_INCREMENT,
+  `catTitle` varchar(20) NOT NULL,
+  PRIMARY KEY (`catId`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+
+--
+-- Contenu de la table `categories`
+--
+
+INSERT INTO `categories` (`catId`, `catTitle`) VALUES
+(1, 'Cat 1'),
+(2, 'Cat 42'),
+(3, 'Wouuuuuu !'),
+(4, 'FUUUUUU');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `plugins`
+--
+
+CREATE TABLE IF NOT EXISTS `plugins` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `title` int(11) NOT NULL,
+  `plugin_file` varchar(50) NOT NULL,
+  `enabled` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Contenu de la table `plugins`
+--
+
+INSERT INTO `plugins` (`id`, `plugin_file`, `enabled`) VALUES
+(1, 'test', 1);
 
 -- --------------------------------------------------------
 
@@ -40,22 +70,51 @@ CREATE TABLE IF NOT EXISTS `categories` (
 
 CREATE TABLE IF NOT EXISTS `post` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `onfront` int(11) NOT NULL DEFAULT '1',
   `title` varchar(255) NOT NULL,
   `content` text NOT NULL,
   `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `author` varchar(20) NOT NULL,
-  `cat` int(11) NOT NULL,
+  `cat` int(11) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=42 ;
 
 --
 -- Contenu de la table `post`
 --
 
-INSERT INTO `post` (`id`, `title`, `content`, `created`, `author`, `cat`) VALUES
-(1, '1st Blog Post', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.', '2013-08-16 10:33:11', 'Konolol', 2),
-(3, 'aaa', '       aaa                             ', '2013-08-16 11:03:12', 'Zbouby', 0),
-(4, 'testest', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non felis erat. Duis euismod quam blandit, adipiscing dui eu, sagittis purus. Suspendisse ut faucibus tellus, vel accumsan tortor. Curabitur venenatis arcu lectus, eget vestibulum lacus egestas sed. Sed at dui posuere, tristique leo at, tincidunt ante. Cras semper tellus ligula, et convallis nisl iaculis ac. Maecenas suscipit mauris sit amet tristique rhoncus. Nullam quis odio eleifend arcu tincidunt blandit. Pellentesque vitae magna augue. Mauris interdum leo ligula, et lobortis eros pulvinar vel. Cras quis erat sagittis nisi ornare commodo non eu lacus. Morbi hendrerit lorem dolor, ac commodo libero laoreet non. Phasellus in nunc pharetra, rutrum justo vel, porta purus. Aenean sodales consectetur lacinia. Pellentesque ullamcorper, justo pulvinar posuere eleifend, ante nunc vehicula justo, sed auctor augue odio facilisis massa. Aliquam sit amet lectus vitae magna vehicula venenatis vel sed felis.\r\n\r\nAliquam facilisis facilisis lacus ac bibendum. Nunc quis nibh fringilla, sagittis ligula ut, elementum enim. Mauris non sagittis risus, id laoreet ante. Suspendisse vel hendrerit metus. Suspendisse pellentesque vel est sit amet faucibus. Vestibulum auctor scelerisque pharetra. Cras nec orci vel risus hendrerit hendrerit quis et arcu. Duis nec feugiat ipsum. Mauris eleifend nisi non gravida vestibulum. Suspendisse potenti.\r\n\r\nQuisque nulla est, vehicula eget imperdiet in, adipiscing ut diam. Cras accumsan felis ac lorem aliquam, eu bibendum dolor varius. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc sodales fermentum nulla et tempus. Pellentesque et venenatis ante. Ut volutpat sem eu sem pulvinar laoreet. Suspendisse potenti.\r\n\r\nProin magna metus, aliquam sed orci quis, tristique feugiat ante. Nunc sed mauris magna. Integer dignissim velit diam, hendrerit scelerisque turpis aliquet vel. Vestibulum sodales fringilla elementum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent quis orci quis nulla rhoncus semper. Sed elementum vestibulum massa, a varius justo hendrerit id. Quisque nisi tortor, mattis in nisi nec, pharetra placerat risus. Proin vel porttitor tortor. Maecenas scelerisque sem neque, at aliquam nunc interdum eget. Suspendisse viverra massa quis dui luctus facilisis. Nullam interdum consequat libero et pellentesque. Aliquam elementum mi id interdum placerat. Donec sed lacinia dolor. Donec a massa quis augue tincidunt tempus.\r\n\r\nCurabitur at elit et urna ultrices pellentesque. Cras in diam vitae diam dapibus malesuada sit amet gravida tellus. Nullam eu cursus elit, sit amet facilisis turpis. Proin id justo tempus, pulvinar erat vitae, consequat enim. Proin mollis eu ligula quis facilisis. Mauris non consequat est. Maecenas sit amet consequat sapien. Aenean interdum dignissim sem a ornare. Suspendisse vehicula ornare nunc, non faucibus magna commodo nec. Nunc vitae condimentum lectus, vitae dignissim diam. Sed vehicula enim tellus, nec vestibulum sapien hendrerit ultricies. Praesent elementum accumsan est sed tincidunt. Vivamus ipsum nisl, viverra id augue sed, interdum semper nunc. Quisque scelerisque suscipit enim non ullamcorper.', '2013-08-16 11:06:14', '', 0);
+INSERT INTO `post` (`id`, `onfront`, `title`, `content`, `created`, `author`, `cat`) VALUES
+(1, 1, '1st Blog PostRERERE', '                                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.AAAAA\r\n\r\n\r\n\r\n\r\n\r\n', '2013-08-16 10:33:11', 'Konolol', 3),
+(23, 1, 'Wouuuu super post édité !', '                     Alors:<div><br></div><div>Blablabla <b>BLA</b></div><div><b><br></b></div><div style="text-align: center;">test !</div><div style="text-align: center;"><ol><li style="text-align: justify;">test</li><li style="text-align: justify;"><span style="text-align: left; line-height: 1.428571429;">test</span><br></li><li style="text-align: justify;"><span style="text-align: left; line-height: 1.428571429;">test</span><br></li><li style="text-align: justify;"><span style="text-align: left; line-height: 1.428571429;">test</span><br></li><li style="text-align: justify;"><span style="text-align: left; line-height: 1.428571429;">test</span><br></li><li style="text-align: justify;"><span style="text-align: left; line-height: 1.428571429;">test</span></li></ol><div style="text-align: left;"><font size="5">testtest TEST</font></div><div style="text-align: left;"><font size="5"><br></font></div><div style="text-align: left;"><font size="5">éèèéèéèè&amp;é"''(-è_çà$ù*!:;,;</font></div></div>\r\n\r\n', '2013-08-19 12:55:52', 'dsgdg', 1),
+(28, 1, 'fdfgdfg', 'dfgggd', '2013-08-21 20:02:22', '', 2),
+(29, 1, 'fdfgdfg', 'dfgggd', '2013-08-21 20:06:10', '', 2),
+(30, 1, 'fdfgdfg', 'dfgggd', '2013-08-21 20:06:10', '', 2),
+(31, 1, 'fdfgdfg', 'dfgggd', '2013-08-21 20:06:10', '', 2),
+(33, 1, 'fdfgdfg', 'dfgggd', '2013-08-21 20:06:10', '', 2),
+(36, 1, 'fdfgdfg', 'dfgggd', '2013-08-21 20:06:11', '', 2),
+(38, 1, 'fdfgdfg', 'dfgggd', '2013-08-21 20:06:11', '', 2),
+(40, 1, 'TEST!', '                                                 <b><font face="georgia" size="6">              Salut, test !\r\n</font></b><div><b><br></b></div><div><b><a href="http://google.com" title="Google" target="_blank"><font face="times new roman">G</font></a><a href="http://gggg" title="" target="">o<font face="impact">o</font><font face="comic sans ms">g</font><font face="courier new">l</font><font face="trebuchet ms">e</font></a><br></b></div><div><b><br></b></div><div><b>[b]test[/b]</b></div>\r\n\r\n\r\n\r\n\r\n\r\n\r\n', '2013-08-21 20:06:11', 'Konolulz', 2);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `users`
+--
+
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `mail` varchar(60) NOT NULL,
+  `password` varchar(200) NOT NULL,
+  `username` varchar(30) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Contenu de la table `users`
+--
+
+INSERT INTO `users` (`id`, `mail`, `password`, `username`) VALUES
+(1, 'nico83110@gmail.com', 'ea1c52256ef184551b2cb5cbcca05bd6fe67f22905d284a5046a933c5ccbbd60', 'Konolol');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
