@@ -1,7 +1,7 @@
 <?php
 function get_posts() 
 {
-    $sql = 'select * from post, categories WHERE post.cat = categories.catId ORDER BY post.id DESC LIMIT 5';
+    $sql = 'select * from post, categories WHERE onfront = 1 AND post.cat = categories.catId ORDER BY post.id DESC LIMIT 5';
     return execute_query($sql);
 }
 
@@ -21,7 +21,7 @@ function get_posts_admin()
 function get_post_by_id($id) 
 {
     $id = (int)$id;
-    $sql = sprintf("select * from post where id = %d limit 1", $id);
+    $sql = sprintf("select * from post, categories where post.id = %d AND post.cat = categories.catId limit 1", $id);
     return execute_query($sql);
 }
  

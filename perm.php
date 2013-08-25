@@ -10,6 +10,8 @@ $smarty->assign('postAuthor', $article['author']);
 $smarty->assign('postDate', $article['created']);
 $smarty->assign('postCat', $article['cat']);
 $smarty->assign('postContent', $article['content']);
+$smarty->assign('catTitle', $article['catTitle']);
+$smarty->assign('catId', $article['catId']);
 
 $smarty->display("$theme/perm.tpl");
 ?>

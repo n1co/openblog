@@ -23,7 +23,7 @@ $smarty->assign('name','Zbouby');
 $smarty->assign('siteName','Zboubz\'s Blog');
 
 open_database();
-$postquery="SELECT COUNT(*) AS id FROM post";
+$postquery="SELECT COUNT(*) AS id FROM post WHERE onfront = 1";
 $result = mysql_query($postquery) or die(mysql_error());
 $num = mysql_fetch_array($result);
 $smarty->assign('art_count', $num["id"]);
