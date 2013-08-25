@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-08-20 16:33:20
+<?php /* Smarty version Smarty-3.1.14, created on 2013-08-25 18:25:11
          compiled from "templates/base/index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:146043721520e5e55abe974-60079243%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '7e9f1e1ad16e46eb55c5f7c98878a3386c29ca22' => 
     array (
       0 => 'templates/base/index.tpl',
-      1 => 1377009172,
+      1 => 1377447910,
       2 => 'file',
     ),
   ),
@@ -47,8 +47,9 @@ $_smarty_tpl->tpl_vars['i']->_loop = true;
 </div>
             <div class="article_footer">Le <?php echo $_smarty_tpl->tpl_vars['i']->value['created'];?>
  par  <a href="#"><?php echo $_smarty_tpl->tpl_vars['i']->value['author'];?>
-</a> in <?php echo $_smarty_tpl->tpl_vars['i']->value['cat'];?>
-</div>
+</a> in <a href="#cat.php?id=<?php echo $_smarty_tpl->tpl_vars['i']->value['catId'];?>
+"><?php echo $_smarty_tpl->tpl_vars['i']->value['catTitle'];?>
+</a></div>
         </div>
     <?php } ?>
 <div class="loadmore">

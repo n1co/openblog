@@ -1,9 +1,16 @@
 <?php
 function get_posts() 
 {
+    $sql = 'select * from post, categories WHERE post.cat = categories.catId ORDER BY post.id DESC LIMIT 5';
+    return execute_query($sql);
+}
+
+/**function get_posts() 
+{
     $sql = 'select * from post ORDER BY id DESC LIMIT 5';
     return execute_query($sql);
 }
+**/
 
 function get_posts_admin() 
 {

@@ -6,7 +6,7 @@
         <div class="article" id="{$i.id}">
             <div class="article_header"><a href="perm.php?id={$i.id}">{$i.title}</a></div>
             <div class="article_content">{$i.content}</div>
-            <div class="article_footer">Le {$i.created} par  <a href="#">{$i.author}</a> in {$i.cat}</div>
+            <div class="article_footer">Le {$i.created} par  <a href="#">{$i.author}</a> in <a href="#cat.php?id={$i.catId}">{$i.catTitle}</a></div>
         </div>
     {/foreach}
 <div class="loadmore">

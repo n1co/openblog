@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-08-22 11:44:31
+<?php /* Smarty version Smarty-3.1.14, created on 2013-08-22 14:46:29
          compiled from "templates/base/editor.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:211466721252137988aebe42-36473599%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'd486497e1ab2e69901915afd6f1c4f84e33150b1' => 
     array (
       0 => 'templates/base/editor.tpl',
-      1 => 1377164669,
+      1 => 1377164829,
       2 => 'file',
     ),
   ),
@@ -31,7 +31,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <script type="text/javascript">
 bkLib.onDomLoaded(function(){
   new nicEditor({fullPanel : true, onSave : function(content, id, instance) {
-    $.post("editor.php", { title: "title", content: "content" } );
+    alert('Work in progress. Use the bottom button instead.');
   } }).panelInstance('editor');
 });
 
