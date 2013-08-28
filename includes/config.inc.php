@@ -16,7 +16,10 @@ $smarty->config_dir = 'configs/';
 $smarty->cache_dir = 'cache/';
 
 $theme = 'base'; 
+$enablePlusOne = true;
+
 $smarty->assign('theme',$theme); 
+$smarty->assign('enablePlusOne',$enablePlusOne); 
 
 $smarty->assign('template', $theme);
 $smarty->assign('name','Zbouby');

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-08-25 18:25:11
+<?php /* Smarty version Smarty-3.1.14, created on 2013-08-28 16:29:58
          compiled from "templates/base/index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:146043721520e5e55abe974-60079243%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '7e9f1e1ad16e46eb55c5f7c98878a3386c29ca22' => 
     array (
       0 => 'templates/base/index.tpl',
-      1 => 1377447910,
+      1 => 1377700195,
       2 => 'file',
     ),
   ),
@@ -22,6 +22,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'art_count' => 0,
     'posts' => 0,
     'i' => 0,
+    'enablePlusOne' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -45,7 +46,8 @@ $_smarty_tpl->tpl_vars['i']->_loop = true;
 </a></div>
             <div class="article_content"><?php echo $_smarty_tpl->tpl_vars['i']->value['content'];?>
 </div>
-            <div class="article_footer">Le <?php echo $_smarty_tpl->tpl_vars['i']->value['created'];?>
+            <div class="article_footer"><?php if ($_smarty_tpl->tpl_vars['enablePlusOne']->value==true){?><div href="perm.php?id=<?php echo $_smarty_tpl->tpl_vars['i']->value['id'];?>
+" class="g-plusone" data-size="medium"></div><?php }?> Le <?php echo $_smarty_tpl->tpl_vars['i']->value['created'];?>
  par  <a href="#"><?php echo $_smarty_tpl->tpl_vars['i']->value['author'];?>
 </a> in <a href="#cat.php?id=<?php echo $_smarty_tpl->tpl_vars['i']->value['catId'];?>
 "><?php echo $_smarty_tpl->tpl_vars['i']->value['catTitle'];?>
